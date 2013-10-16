@@ -112,7 +112,7 @@ def resourceString(resource=None):
         else:
             item = itemAtPath(resource, column['path'])
             if column['threshold']:
-                if int(item) > column['threshold']:
+                if item == None or int(item) > column['threshold']:
                     ret += "${RED}"
                 else:
                     ret += "${GREEN}"
